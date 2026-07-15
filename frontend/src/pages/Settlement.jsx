@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { toast } from "react-toastify";
 
 import { getSettlements } from "../services/settlementService";
-import { generateLetter } from "../services/NegotiationService";
+import { generateLetter } from "../services/negotiationService";
 import PageHeader from "../components/common/PageHeader";
 import LoadingSpinner from "../components/common/LoadingSpinner";
 import EmptyState from "../components/common/EmptyState";
