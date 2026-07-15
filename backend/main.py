@@ -27,21 +27,26 @@ app = FastAPI(
     description="AI-powered Debt Relief & Financial Recovery Platform with Financial Analysis, Settlement Prediction, and AI Negotiation.",
 )
 
-# CORS
+# -----------------------------
+# CORS Configuration
+# -----------------------------
+origins = [
+    "https://ai-powered-debt-relief-platform.vercel.app",
+    "https://ai-powered-debt-relief-platform-ryo-five.vercel.app",
+    "http://localhost:5173",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://ai-powered-debt-relief-platform-ryo-five.vercel.app",
-        "http://localhost:5173",
-    ],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Routers
-# Routers
-app.include_router(auth_router)
+# -----------------------------
+# Register Routers
+# -----------------------------
 app.include_router(auth_router)
 app.include_router(users_router)
 app.include_router(profile_router)
@@ -56,7 +61,9 @@ app.include_router(ai_history_router)
 app.include_router(ai_chat_router)
 app.include_router(rights_router)
 
-
+# -----------------------------
+# Root Endpoint
+# -----------------------------
 @app.get("/")
 def root():
     return {
