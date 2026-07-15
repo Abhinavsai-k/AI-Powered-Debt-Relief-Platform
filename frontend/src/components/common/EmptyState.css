@@ -1,0 +1,53 @@
+.empty-state {
+
+    min-height: 350px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    box-shadow: 0 8px 24px rgba(15,23,42,0.08);
+
+}
+
+.empty-icon{
+
+    font-size:64px;
+
+    margin-bottom:20px;
+
+}
+
+.empty-state h2{
+
+    margin:0;
+
+    color:#0f172a;
+
+}
+
+.empty-state p{
+
+    margin-top:12px;
+
+    color:#64748b;
+
+    max-width:500px;
+
+    line-height:1.6;
+
+}

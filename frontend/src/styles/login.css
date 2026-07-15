@@ -1,0 +1,204 @@
+*{
+    box-sizing:border-box;
+}
+
+.login-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    position:relative;
+    background:linear-gradient(-45deg,#0f172a,#1e3a8a,#2563eb,#0ea5e9);
+    background-size:400% 400%;
+    animation:bgMove 12s ease infinite;
+    padding:20px;
+}
+
+@keyframes bgMove{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+.background-animation{
+
+    position:absolute;
+    inset:0;
+    backdrop-filter:blur(25px);
+
+}
+
+.login-card{
+
+    position:relative;
+
+    width:420px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:22px;
+
+    padding:45px;
+
+    color:white;
+
+    text-align:center;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.35);
+
+}
+
+.login-card h1{
+
+    font-size:34px;
+
+    margin-bottom:8px;
+
+    font-weight:700;
+
+}
+
+.subtitle{
+
+    color:#dbeafe;
+
+    margin-bottom:35px;
+
+    font-size:15px;
+
+}
+
+.login-card form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.login-card input{
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.18);
+
+    color:white;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.login-card input::placeholder{
+
+    color:#d1d5db;
+
+}
+
+.login-card input:focus{
+
+    background:rgba(255,255,255,.25);
+
+    box-shadow:
+    0 0 0 3px rgba(96,165,250,.35);
+
+}
+
+.login-card button{
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.login-card button:hover{
+
+    background:#1d4ed8;
+
+}
+
+.login-card button:disabled{
+
+    background:#64748b;
+
+    cursor:not-allowed;
+
+}
+
+.register-link{
+
+    margin-top:25px;
+
+    color:#dbeafe;
+
+}
+
+.register-link a{
+
+    margin-left:8px;
+
+    color:white;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+.register-link a:hover{
+
+    text-decoration:underline;
+
+}
+
+@media(max-width:500px){
+
+.login-card{
+
+width:100%;
+
+padding:35px 25px;
+
+}
+
+}

@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+.register-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(-45deg, #0f172a, #1e3a8a, #2563eb, #0ea5e9);
+    background-size: 400% 400%;
+    animation: bgMove 12s ease infinite;
+    padding: 20px;
+}
+
+@keyframes bgMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.register-background {
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(25px);
+}
+
+.register-card {
+    position: relative;
+    width: 430px;
+    background: rgba(255, 255, 255, .12);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 22px;
+    padding: 45px;
+    color: white;
+    text-align: center;
+    /* ⭐ FIXED: Completed the rgba value and closed the property/bracket */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); 
+}

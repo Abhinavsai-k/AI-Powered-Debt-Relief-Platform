@@ -1,0 +1,30 @@
+.recommendation-card{
+    margin-top:30px;
+}
+
+.recommendation-box{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    border-left:8px solid #2563eb;
+}
+
+.recommendation-box h3{
+
+    color:#2563eb;
+
+    margin-bottom:15px;
+}
+
+.recommendation-box p{
+
+    color:#555;
+
+    line-height:1.8;
+}

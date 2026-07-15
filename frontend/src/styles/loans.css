@@ -1,0 +1,50 @@
+.loans-page {
+  padding: 30px;
+}
+
+.loans-table-container {
+  margin-top: 30px;
+  overflow-x: auto;
+}
+
+.loans-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.loans-table thead {
+  background: #2563eb;
+  color: white;
+}
+
+.loans-table th,
+.loans-table td {
+  padding: 15px;
+  text-align: left;
+}
+
+.loans-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.loans-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.loan-actions {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .loans-page {
+    padding: 20px;
+  }
+
+  .loan-actions {
+    flex-direction: column;
+  }
+}

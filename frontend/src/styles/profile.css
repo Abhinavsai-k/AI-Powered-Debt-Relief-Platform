@@ -1,0 +1,50 @@
+.profile-page {
+  padding: 30px;
+}
+
+.profile-table-container {
+  margin-top: 30px;
+  overflow-x: auto;
+}
+
+.profile-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.profile-table thead {
+  background: #2563eb;
+  color: white;
+}
+
+.profile-table th,
+.profile-table td {
+  padding: 15px;
+  text-align: left;
+}
+
+.profile-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 20px;
+  }
+
+  .profile-actions {
+    flex-direction: column;
+  }
+}

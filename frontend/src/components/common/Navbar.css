@@ -1,0 +1,284 @@
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar {
+  height: 72px;
+  padding: 0 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(17, 24, 39, 0.72);
+  backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid rgba(255,255,255,.08);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ===========================
+   LEFT
+=========================== */
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.logo {
+  margin: 0;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* ===========================
+   SEARCH
+=========================== */
+
+.navbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box {
+  width: 100%;
+  max-width: 480px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 12px 18px;
+
+  border-radius: 18px;
+
+  background: rgba(255,255,255,.05);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  transition: .25s;
+}
+
+.search-box:hover {
+  border-color: rgba(59,130,246,.5);
+}
+
+.search-box:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,.15);
+}
+
+.search-box input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+
+  color: white;
+  font-size: 15px;
+}
+
+.search-box input::placeholder {
+  color: #94a3b8;
+}
+
+.search-icon {
+  color: #94a3b8;
+}
+
+/* ===========================
+   RIGHT
+=========================== */
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+/* ===========================
+   ICON BUTTON
+=========================== */
+
+.icon-btn {
+  width: 44px;
+  height: 44px;
+
+  border: none;
+  outline: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  color: white;
+
+  background: rgba(255,255,255,.05);
+
+  border-radius: 14px;
+
+  transition: .25s;
+}
+
+.icon-btn:hover {
+  background: rgba(59,130,246,.15);
+}
+
+/* ===========================
+   PROFILE
+=========================== */
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  transition: .25s;
+}
+
+.profile:hover {
+  background: rgba(255,255,255,.05);
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+      135deg,
+      #2563eb,
+      #7c3aed
+  );
+
+  color: white;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  transition: .25s;
+}
+
+.profile:hover .avatar {
+  transform: scale(1.08);
+}
+
+.profile-info h4 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 15px;
+}
+
+.profile-info p {
+  margin: 2px 0 0;
+
+  color: #94a3b8;
+
+  font-size: 13px;
+}
+
+/* ===========================
+   DROPDOWN
+=========================== */
+
+.profile-divider {
+  height: 1px;
+  background: rgba(255,255,255,.08);
+}
+
+.profile-menu-item {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 14px 20px;
+
+  background: transparent;
+  border: none;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: .25s;
+
+  font-size: 15px;
+}
+
+.profile-menu-item:hover {
+  background: rgba(255,255,255,.06);
+}
+
+.logout-btn {
+  color: #ef4444;
+}
+
+.logout-btn:hover {
+  background: rgba(239,68,68,.12);
+}
+
+/* ===========================
+   ARROW
+=========================== */
+
+.rotate-icon {
+  transform: rotate(180deg);
+  transition: .25s;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:900px) {
+
+  .search-box {
+    max-width: 240px;
+  }
+
+  .profile-info {
+    display: none;
+  }
+
+}
+
+@media (max-width:700px) {
+
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .search-box {
+    max-width: 180px;
+  }
+
+}
+
+@media (max-width:550px) {
+
+  .navbar-center {
+    display: none;
+  }
+
+}
