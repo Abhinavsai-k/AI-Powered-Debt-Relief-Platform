@@ -18,18 +18,23 @@ from app.api.ai_history import router as ai_history_router
 from app.api.ai_chat import router as ai_chat_router
 from app.api.rights import router as rights_router
 
+# =====================================================
 # Create Database Tables
+# =====================================================
 models.Base.metadata.create_all(bind=engine)
 
+# =====================================================
+# FastAPI App
+# =====================================================
 app = FastAPI(
     title="FinRelief AI Pro",
     version="3.0.0",
     description="AI-powered Debt Relief & Financial Recovery Platform with Financial Analysis, Settlement Prediction, and AI Negotiation.",
 )
 
-# -----------------------------
+# =====================================================
 # CORS Configuration
-# -----------------------------
+# =====================================================
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -38,13 +43,14 @@ app.add_middleware(
         "https://ai-powered-debt-relief-platform-cgj9qxsbj-abhinavsai.vercel.app",
         "http://localhost:5173",
     ],
-    allow_credentials=False,
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-# -----------------------------
+
+# =====================================================
 # Register Routers
-# -----------------------------
+# =====================================================
 app.include_router(auth_router)
 app.include_router(users_router)
 app.include_router(profile_router)
@@ -59,9 +65,9 @@ app.include_router(ai_history_router)
 app.include_router(ai_chat_router)
 app.include_router(rights_router)
 
-# -----------------------------
+# =====================================================
 # Root Endpoint
-# -----------------------------
+# =====================================================
 @app.get("/")
 def root():
     return {
