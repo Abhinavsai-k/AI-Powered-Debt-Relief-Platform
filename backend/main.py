@@ -30,20 +30,18 @@ app = FastAPI(
 # -----------------------------
 # CORS Configuration
 # -----------------------------
-origins = [
-    "https://ai-powered-debt-relief-platform.vercel.app",
-    "https://ai-powered-debt-relief-platform-ryo-five.vercel.app",
-    "http://localhost:5173",
-]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
+    allow_origins=[
+        "https://ai-powered-debt-relief-platform.vercel.app",
+        "https://ai-powered-debt-relief-platform-ryo-five.vercel.app",
+        "https://ai-powered-debt-relief-platform-cgj9qxsbj-abhinavsai.vercel.app",
+        "http://localhost:5173",
+    ],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 # -----------------------------
 # Register Routers
 # -----------------------------
